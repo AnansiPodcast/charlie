@@ -1,0 +1,29 @@
+{
+  "name": "charlie",
+  "version": "0.1.0",
+  "description": "Fetch, parse and handle Podcasts XMLs and Episodes",
+  "license": "MIT",
+  "repository": "AnansiPodcast/charlie",
+  "author": {
+    "name": "Sérgio Vilar",
+    "email": "vilar@me.com",
+    "url": "http://vilar.cc"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    ""
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "ava": "^0.15.0",
+    "xo": "^0.16.0"
+  },
+  "xo": {
+    "esnext": true
+  }
+}
