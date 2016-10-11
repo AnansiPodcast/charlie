@@ -1,4 +1,4 @@
-# charlie
+# charlie [![Build Status](https://travis-ci.org/AnansiPodcast/charlie.svg?branch=master)](https://travis-ci.org/AnansiPodcast/charlie)
 
 Handle Podcasts in Javascript apps.
 
