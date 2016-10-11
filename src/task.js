@@ -2,7 +2,7 @@ class Task {
 
   constructor() {
     if (this.constructor === Task) {
-      throw new TypeError("Can not construct Task class");
+      throw new Error("Can not construct Task class");
     }
   }
 
