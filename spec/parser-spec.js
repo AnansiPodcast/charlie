@@ -3,8 +3,12 @@ import parser from '../src/parser.js'
 
 describe('Charlie parser', () => {
 
-  it('should fail when adding a feed with invalid URL', () => {
-    expect(parser).to.throw(Error)
+  it('should fail when adding a feed with invalid URL', (done) => {
+    parser()
+      .catch(e => {
+        expect(e).to.be.a('error')
+        done()
+      })
   })
 
   it('should fail when adding a non-feed url', (done) => {
