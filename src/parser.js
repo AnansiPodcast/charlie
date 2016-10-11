@@ -1,7 +1,7 @@
-var q = require('q')
-  , http = require('q-io/http')
-  , validator = require('validator')
-  , podcastParser = require('node-podcast-parser')
+import q from 'q'
+import http from 'q-io/http'
+import validator from 'validator'
+import {default as podcastParser} from 'node-podcast-parser'
 
 var processFeed = function(response) {
 

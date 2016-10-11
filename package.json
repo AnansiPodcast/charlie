@@ -16,7 +16,8 @@
     ""
   ],
   "scripts": {
-    "test": "mocha ./spec --reporter spec --timeout 20000"
+    "test": "mocha ./spec --reporter spec --timeout 20000 --compilers js:babel-core/register",
+    "build": "babel src --out-dir ./"
   },
   "dependencies": {
     "node-podcast-parser": "^1.0.2",
@@ -26,6 +27,9 @@
     "validator": "^6.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.17.0",
+    "babel-preset-es2015": "^6.16.0",
     "chai": "^3.5.0",
     "mocha": "^3.1.0"
   }

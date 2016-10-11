@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-  , parser = require('../parser.js')
+  , parser = require('../src/parser.js')
 
 describe('Charlie parser', function() {
 
