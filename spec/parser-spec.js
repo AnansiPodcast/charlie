@@ -1,23 +1,23 @@
-var expect = require('chai').expect
-  , parser = require('../src/parser.js')
+import {expect} from 'chai'
+import parser from '../src/parser.js'
 
-describe('Charlie parser', function() {
+describe('Charlie parser', () => {
 
-  it('should fail when adding a feed with invalid URL', function() {
+  it('should fail when adding a feed with invalid URL', () => {
     expect(parser).to.throw(Error)
   })
 
-  it('should fail when adding a non-feed url', function(done) {
+  it('should fail when adding a non-feed url', (done) => {
     parser('http://google.com')
-    .catch(function(error) {
+    .catch((error) => {
       expect(error).to.exist
       done()
     })
   })
 
-  it('should return podcast data', function(done) {
+  it('should return podcast data', (done) => {
     parser('http://iradex.com.br/iradexpodcast/feed.xml')
-    .then(function(data) {
+    .then((data) => {
 
       // Podcast data
       expect(data).to.have.property('title')
