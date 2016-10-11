@@ -20,16 +20,22 @@ class Parser {
 
   static parse(url) {
 
-    if(!validator.isURL(url))
-      throw new Error('Invalid Podcast URL')
+    const deferred = q.defer()
+    if(!validator.isURL(url)) {
+      deferred.reject(new Error('Invalid Podcast URL'))
+      return deferred.promise
+    }
 
-    return http.read({
+    http.read({
       url: url,
       method: 'GET'
-    }).then((response) => {
-      return response.toString()
-    }).then(Parser.process)
+    })
+      .then(response => response.toString())
+      .then(Parser.process)
+      .then(deferred.resolve)
+      .catch(deferred.reject)
 
+    return deferred.promise
   }
 
 }
